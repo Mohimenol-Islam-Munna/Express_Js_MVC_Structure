@@ -24,6 +24,12 @@ app.use("/admin", adminRouter);
 app.use("/", (req, res) => {
   res.render("index.ejs", { name: "munna", campus: "PUST" });
 });
+
+// 404 page
+app.use((req, res) => {
+  res.send("<h2>Opps! 404, Page Not Found</h2>");
+});
+
 // ----------- end all routes -----------
 
 // server PORT
