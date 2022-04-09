@@ -1,7 +1,7 @@
 const express = require("express");
 
 const userController = (req, res) => {
-  res.send("<h2>User Home Page Serve From Controller</h2>");
+  res.render("user.ejs", { isLoggedIn: false, user_id: 1, name: "mohimenol islam" });
 };
 
 module.exports = userController;
