@@ -6,15 +6,16 @@ const app = express();
 
 // body parser
 app.use(bodyParser.urlencoded());
+app.set("view engine", "ejs");
 
 app.use("/", (req, res) => {
-  res.send("<h2>Home Page</h2>");
+  res.render("index.ejs", { name: "munna", campus: "PUST" });
 });
 
 // server PORT
 const PORT = "8000";
 
-// running server 
+// running server
 app.listen(PORT, () => {
   console.log(`server running at ${PORT}...`);
 });
